@@ -1,0 +1,4 @@
+@import 'lib/all'; // lib디렉터리 안에 모든 파일 불러옴
+
+// 반응형 디자인 할때 참고할 크기
+$breakpoints: (small: 320px, medium: 768px, large:1024px, wide:1400px);

@@ -1,4 +1,4 @@
-@import '../styles/utils.scss'; // styles/lib 디렉터리의 파일들에서 설정한 open-color와 그림자를위한 mixins 사용하기위함
+@import 'utils.scss'; // styles/lib 디렉터리의 파일들에서 설정한 open-color와 그림자를위한 mixins 사용하기위함
 
 .header {
   background: $oc-blue-6;

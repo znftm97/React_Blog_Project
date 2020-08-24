@@ -30,6 +30,7 @@ class EditorTemplate extends Component {
 
   render() {
     const { header, editor, preview } = this.props;
+    // 3가지 props를 받아서 알맞은 위치에 렌더링
     const { leftPercentage } = this.state;
     const { handleSeparatorMouseDown } = this;
 

@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 import * as editorActions from 'store/modules/editor'; // 모든 액션함수 불러옴
 
 class EditorPaneContainer extends Component{
-
     handleChangeInput = ({name, value}) =>{
         const {EditorActions} = this.props;
         EditorActions.changeInput({name, value});

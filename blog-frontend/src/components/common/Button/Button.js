@@ -20,7 +20,7 @@ const Button = ({
   // disabled 값이 true가 되면 className에 disabled가 추가됩니다.
   return (
     <Element 
-      to={to} 
+      to={to} //to값 전달해서 Link 요소로 렌더링
       className={cx('button', theme, { disabled })} 
       onClick={disabled ? () => null : onClick}>
       {children}

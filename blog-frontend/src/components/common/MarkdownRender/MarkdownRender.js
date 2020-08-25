@@ -58,7 +58,6 @@ class MarkdownRender extends Component{
 
     render(){
         const {html} = this.state;
-
         //React에서 html을 렌더링하려면 객체를 생성해 내부에 __html값을 설정해야함
         const markup={
             __html: html

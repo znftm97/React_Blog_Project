@@ -32,7 +32,7 @@ const initialState = Map({
 
 // handleActions 를 이용하여 리듀서 정의(생성)
 export default handleActions({
-    // SET_INPUT을 []로 감싸는 이유는 위 액션타입에 접두사가 있기 때문임
+    // 액션을 []로 감싸는 이유는 위 액션타입에 접두사가 있기 때문임
     //immutable의 Map의 set 함수, js의 Map과는 다름
     //value에 action.payload 값으로 세팅
     //createAction으로 액션을 만들면 액션에 필요한 추가 데이터는 payload라는 이름을 사용함

@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 
 class EditorTemplate extends Component {
   state = {
-    leftPercentage: 0.5
+    leftPercentage: 0.5 //선을 중간에 위치하게 하기위해 0.5로 세팅
   }
 
   // separator 클릭 후 마우스를 움직이면 그에 따라 leftPercentage 업데이트
@@ -43,6 +43,7 @@ class EditorTemplate extends Component {
     };
 
     // separator 위치 설정
+    // 선을 중간에 위치하게 하기위함
     const separatorStyle = {
       left: `${leftPercentage * 100}%`
     };

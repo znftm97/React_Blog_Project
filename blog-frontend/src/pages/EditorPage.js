@@ -4,7 +4,7 @@ import EditorHeader from '../components/editor/EditorHeader/EditorHeader';
 import EditorPane from '../components/editor/EditorPane/EditorPane';
 import PreviewPane from '../components/editor/PreviewPane/PreviewPane';
 import EditorPaneContainer from '../containers/editor/EditorPaneContainer';
-import PreviewPaneContainer from '../containers/PreviewPaneContainer';
+import PreviewPaneContainer from '../containers/editor/PreviewPaneContainer';
 
 const EditorPage = () =>{
     return(

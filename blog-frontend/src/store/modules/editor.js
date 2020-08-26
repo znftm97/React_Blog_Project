@@ -2,6 +2,7 @@
 import {createAction, handleActions} from 'redux-actions';
 import {Map} from 'immutable';
 import {pender} from 'redux-pender';
+import * as api from 'lib/api';
 
 /*
 Ducks 구조의 redux
@@ -16,18 +17,21 @@ reducer를 메인으로 내보내야함
 // 액션타입 정의 액션이름 SET_INPUT , 액션타입 정의 시 앞부분에 리듀서 이름을 적어주면
 // 액션 타입이름이 다른 리듀서끼리 중복되어도 문제 없음
 const INITIALIZE = 'editor/INITIALIZE';
-const CHANGE_INPUT = 'editor/CHANGE_INPUT'
+const CHANGE_INPUT = 'editor/CHANGE_INPUT';
+const WRITE_POST =  'editor/WRITE_POST';
 
 //action creators
 export const initialize = createAction(INITIALIZE);
 export const changeInput = createAction(CHANGE_INPUT);
+export const writePost = createAction(WRITE_POST);
 
 //initial state
 //리듀서 초기상태 정의
 const initialState = Map({
     title: '',
     markdown:'',
-    tags:''
+    tags:'',
+    postId:''
 });
 
 // handleActions 를 이용하여 리듀서 정의(생성)
@@ -40,5 +44,12 @@ export default handleActions({
     [CHANGE_INPUT]: (state,action) => {
         const {name, value} = action.payload;
         return state.set(name,value);
-    }
+    },
+    ...pender({
+        type: WRITE_POST,
+        onSuccess: (state, action) =>{
+            const { _id } = action.payload.data;
+            return state.set('postId', _id);
+        }
+    })
 },initialState)

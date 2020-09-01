@@ -23,7 +23,7 @@ const WRITE_POST =  'editor/WRITE_POST';
 //action creators
 export const initialize = createAction(INITIALIZE);
 export const changeInput = createAction(CHANGE_INPUT);
-export const writePost = createAction(WRITE_POST);
+export const writePost = createAction(WRITE_POST, api.writePost);
 
 //initial state
 //리듀서 초기상태 정의
@@ -31,7 +31,7 @@ const initialState = Map({
     title: '',
     markdown:'',
     tags:'',
-    postId:''
+    postId: null
 });
 
 // handleActions 를 이용하여 리듀서 정의(생성)

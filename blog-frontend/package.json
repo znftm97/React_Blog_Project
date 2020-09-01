@@ -42,6 +42,7 @@
     "jest-watch-typeahead": "0.4.2",
     "marked": "^1.1.1",
     "mini-css-extract-plugin": "0.9.0",
+    "moment": "^2.27.0",
     "node-sass": "^4.14.1",
     "open-color": "^1.7.0",
     "optimize-css-assets-webpack-plugin": "5.0.3",
@@ -149,5 +150,7 @@
       "react-app"
     ]
   },
-  "proxy": "http://loaclhost:4000"
+  "proxy": "http://localhost:4000"
+  
+
 }

@@ -37,6 +37,7 @@ exports.write = async (ctx) => {
     const { title, body, tags } = ctx.request.body;
   
     // 새 Post 인스턴스를 생성
+    // 생성자 함수의 파라미터에 객체(title,body,tags) 넣음
     const post = new Post({
       title, body, tags
     });

@@ -40,16 +40,16 @@ export default handleActions({
     //immutable의 Map의 set 함수, js의 Map과는 다름
     //value에 action.payload 값으로 세팅
     //createAction으로 액션을 만들면 액션에 필요한 추가 데이터는 payload라는 이름을 사용함
-    [INITIALIZE]: (state,action) => initialState,
-    [CHANGE_INPUT]: (state,action) => {
-        const {name, value} = action.payload;
-        return state.set(name,value);
+    [INITIALIZE]: (state, action) => initialState,
+    [CHANGE_INPUT]: (state, action) => {
+        const { name, value } = action.payload;
+        return state.set(name, value);
     },
     ...pender({
         type: WRITE_POST,
-        onSuccess: (state, action) =>{
-            const { _id } = action.payload.data;
-            return state.set('postId', _id);
+        onSuccess: (state, action) => {
+        const { _id } = action.payload.data;
+        return state.set('postId', _id);
         }
     })
 },initialState)

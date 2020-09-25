@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## React && Koa Framework를 사용한 블로그 프로젝트입니다.
+## React를 사용하여 프론트 작업만 완료한 프로젝트입니다.
 
 ## Available Scripts
 

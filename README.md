@@ -1,6 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## React를 사용하여 프론트 작업만 완료한 프로젝트입니다.
+## 참고 문헌
+- 리액트를 다루는 기술
 
 ## Available Scripts
 
